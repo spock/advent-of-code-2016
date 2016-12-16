@@ -59,4 +59,6 @@ print("Total enabled pixels: ", total_pixels)
 for row in range(height):
     for col in range(width):
         print('*' if screen[row, col] else ' ', end='')
+        if col != 0 and (col + 1) % 5 == 0:
+            print(' '*5, end='')
     print()
