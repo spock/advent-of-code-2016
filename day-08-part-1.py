@@ -1,4 +1,4 @@
-# day 8, part 1
+# day 8, parts 1 and 2
 # 50 pixels wide and 6 pixels tall, all of which start "off" - guess it's time to learn some numpy arrays.
 # As this is my first numpy experience, code is likely suboptimal.
 import numpy as np
@@ -54,4 +54,9 @@ with open('day_8_puzzle_1.txt') as fh:
 
 total_pixels = screen.sum()
 print("Total enabled pixels: ", total_pixels)
-# print(screen)
+
+# Let's pretty-print the screen.
+for row in range(height):
+    for col in range(width):
+        print('*' if screen[row, col] else ' ', end='')
+    print()
